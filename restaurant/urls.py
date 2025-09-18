@@ -1,6 +1,8 @@
-from django.urls import path
-from . import views
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from . import views 
 
 urlpatterns = [
-    path('home', views.home, name='home')
+    path('menu/', views.MenuItemView.as_view()),
+    path('menu/<int:pk>', views.SingleItemView.as_view()),
 ]
