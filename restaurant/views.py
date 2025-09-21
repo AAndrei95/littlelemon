@@ -6,7 +6,7 @@ from .models import Menu, Booking
 from .serializers import MenuSerializer, BookingSerializer
 
 class MenuItemView(ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer  
 
